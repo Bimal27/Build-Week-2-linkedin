@@ -1,5 +1,5 @@
 import '../Activity/ActivityStyle.css'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import React from 'react'
 import InterestList from './InterestList'
 

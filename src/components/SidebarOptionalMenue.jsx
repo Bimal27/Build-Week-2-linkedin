@@ -4,7 +4,7 @@ import { AiFillQuestionCircle } from "react-icons/ai";
 
 export default function SidebarOptionalMenue() {
     return (
-        <div id='sidebaroptionalmenu'>
+        <div id='sidebaroptionalmenu' className='mb-3'>
             <Container>
                 <Row>
                     <div><h2>Edit Public Profile & URL</h2></div>
