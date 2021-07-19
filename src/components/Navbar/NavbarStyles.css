@@ -1,9 +1,7 @@
 #topNavbar {
     background-color: #FFFFFF;
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100vw;
-    z-index: 1;
     margin: 0px;
 }
 

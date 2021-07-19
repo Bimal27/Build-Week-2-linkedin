@@ -1,13 +1,14 @@
 
 import './App.css';
 import TopNavbar from './components/Navbar/TopNavbar';
-import Jumbotron from './components/Jumbotron';
+import ProfilePage from './components/ProfilePage';
+
 
 function App() {
     return (
         <div className="App">
             <TopNavbar/>
-            <Jumbotron />
+            <ProfilePage/>
         </div>
     );
 

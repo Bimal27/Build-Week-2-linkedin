@@ -15,7 +15,7 @@ const useFetch = ( url, authorization ) => {
             method  : 'GET',
             headers : { 
                 'Content-Type'  : 'application/json',
-                'Authorization' : authorization
+                'Authorization' : `Bearer ${authorization}`
             }
         }
     
