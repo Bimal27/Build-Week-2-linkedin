@@ -42,10 +42,11 @@ const Jumbotron = ({ title }) => {
                 if (response.ok){
                     return response.json();
                 }
-                else
+                else {
                     setIsPending( false );
                     setIsError( response.status )
-                    throw new Error( `HTTP error! status: ${ response.status }` );
+                    throw Error( response.status );
+                }
             })
             .then( data => {
                 setUserList( data );
@@ -55,7 +56,6 @@ const Jumbotron = ({ title }) => {
             .catch( error => {
                 console.error(error)
                 setIsPending( false );
-                // setIsError( true )
             })
 
         },[]);
@@ -70,11 +70,13 @@ const Jumbotron = ({ title }) => {
                         isPending
                             ? <Pending />
                             : userList &&
-                                userList.map( ({ _id, name ,surname ,email }) => 
-                                    <ListGroupItem key={ _id }>
-                                        From: { name } - For: { surname } - At: { surname }
-                                    </ListGroupItem>
-                            )
+                                userList
+                                    .filter( user => user.name === 'Attila' )
+                                    .map( ({ _id, name ,surname ,email }) => 
+                                        <ListGroupItem key={ _id }>
+                                            From: { name }
+                                        </ListGroupItem>
+                                    )
                     }
                 </Col>
             </Row>
