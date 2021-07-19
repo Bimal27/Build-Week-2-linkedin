@@ -5,7 +5,7 @@ import ActivityList from './ActivityList'
 
 export default function Activity() {
     return (
-        <div id='activity'>
+        <div id='activity' className='mb-3'>
             <Container>
                 <Row>
                     <div><h5>Activity</h5></div>

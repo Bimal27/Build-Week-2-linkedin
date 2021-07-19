@@ -77,3 +77,37 @@
 
 }
 
+
+/* INTERESTLIST-ITEMS */
+
+#interestlist {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 350px;
+    
+}
+
+#interestlist img {
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+#interestlist div {
+    width: 300px;
+
+}
+
+#interestlist h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    width: 280px;
+}
+#interestlist p {
+    font-size: 13px;
+    text-overflow: ellipsis;
+
+}
+
