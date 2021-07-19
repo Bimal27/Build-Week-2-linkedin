@@ -12,22 +12,20 @@ const About = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Container className="bg-light mt-5 pt-2">
-      <Form className="form ">
-          <Button className="btn-pencil" onClick={handleShow}>
-        <BiPencil onClick={handleShow} />
-      </Button>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label>About</Form.Label>
-          <Form.Control className="mt-3" as="textarea" rows={3} />
-        </Form.Group>
+    <Container>
+      <Form className="form mt-3 pl-3 pt-3">
+          
+        <BiPencil className="btn-pencil  " onClick={handleShow} />
+        <h6>About</h6>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris elit, eleifend sit amet ex non, pharetra pharetra diam. Phasellus vel mauris lectus. Nam scelerisque, nulla eget blandit hendrerit, velit sem egestas orci, et efficitur ipsum sem ut odio... <small className="text-primary">see more</small></p>
       </Form>
 
       
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Edit About</Modal.Title>
+        <Modal.Header className="pt-1" closeButton>
+          <Modal.Title className="h6">Edit About</Modal.Title>
         </Modal.Header>
         <Form className="p-3">
           <Form.Group controlId="exampleForm.ControlTextarea1">

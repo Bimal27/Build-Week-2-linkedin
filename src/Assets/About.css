@@ -1,23 +1,34 @@
-.form{
-
-    position: relative;
-    padding-bottom:10px;
-}
-.btn-pencil{
-    position: absolute;
-    top:0;
-    right: 0;
-    padding:2px;
-    color: rgb(32, 32, 32);
-    
-}
-.btn-save{
-    border-radius: 20px;
-    padding:0px 10px;
+.form {
+  position: relative;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
 }
 
+.btn-pencil {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 5px 2px 5px;
+  color: rgb(32, 32, 32);
+  font-size: 1.6em;
+  border-radius: 50%;
+}
+
+.btn-pencil:hover {
+  background-color: rgb(229, 229, 233);
+  color: rgb(32, 32, 32);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
 .btn-pencil:focus {
-    box-shadow: none;
-    color:none;
+  box-shadow: none;
 
+  color: none;
+  background-color: none;
+  border-color: none;
+}
+.btn-save {
+  border-radius: 20px;
+  padding: 0px 10px;
 }
