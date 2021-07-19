@@ -3,6 +3,7 @@ import { Container, Row, Col, ListGroupItem, } from 'react-bootstrap';
 import { AUTHORIZATION } from '../hidden/credentials'
 import Error from './Error';
 import Pending from './Pending';
+import useFetch from './useFetch';
 
 /*
     _id       : "5d84937322b7b54d848eb41b", //server generated
@@ -20,45 +21,9 @@ import Pending from './Pending';
 */
 
 const Jumbotron = ({ title }) => {
-    const [ userList       , setUserList  ] = useState( null );
-    const [ isPending      , setIsPending ] = useState( true );
-    const [ isError        , setIsError   ] = useState( null );
 
-    useEffect( () => {
-
-        const URL = 'https://striveschool-api.herokuapp.com/api/profile'
-        
-        const requestOptions = {
-            
-            method  : 'GET',
-            headers : { 
-                'Content-Type'  : 'application/json',
-                'Authorization' : AUTHORIZATION
-            }
-        }
-    
-        fetch( URL , requestOptions )
-            .then( response => {
-                if (response.ok){
-                    return response.json();
-                }
-                else {
-                    setIsPending( false );
-                    setIsError( response.status )
-                    throw Error( response.status );
-                }
-            })
-            .then( data => {
-                setUserList( data );
-                setIsPending( false );
-                setIsError( null )
-            })
-            .catch( error => {
-                console.error(error)
-                setIsPending( false );
-            })
-
-        },[]);
+    const URL = 'https://striveschool-api.herokuapp.com/api/profile'
+    const { dataList: userList, isPending, isError } = useFetch( URL, AUTHORIZATION )
 
     return ( 
         <Container>
