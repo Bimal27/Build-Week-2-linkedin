@@ -5,6 +5,7 @@ import { Container, } from 'react-bootstrap';
 import Error    from '../Error';
 import Pending  from '../Pending';
 import useFetch from '../useFetch';
+import HeaderJumbotron from './HeaderJumbotron';
 
 /*
     _id       : "5d84937322b7b54d848eb41b", //server generated
@@ -38,7 +39,7 @@ const Header = ({  }) => {
                                     .map( ( user ) => 
                                         
                                         <header key={ user._id }>
-                                            {user.name}
+                                            <HeaderJumbotron user={ user } />
                                         </header>
                                     )
                     }
