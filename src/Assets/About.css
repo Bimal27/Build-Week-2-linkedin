@@ -13,13 +13,12 @@
   color: rgb(32, 32, 32);
   font-size: 1.6em;
   border-radius: 50%;
+  transition: all .3s ease;
 }
 
 .btn-pencil:hover {
   background-color: rgb(229, 229, 233);
   color: rgb(32, 32, 32);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 .btn-pencil:focus {
   box-shadow: none;

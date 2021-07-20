@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import {  useState } from "react";
 import { Container, Button, Modal, Form } from "react-bootstrap";
 import { BiPencil } from "react-icons/bi";
 import '../Assets/About.css'

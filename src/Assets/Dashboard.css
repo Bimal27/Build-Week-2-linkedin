@@ -1,1 +1,19 @@
 
+.Dashboard{
+    background-color: #e8f3ff;
+    border-radius: 5px;
+}
+
+
+.cells{
+    border-radius: 5px;
+}
+
+p{
+    font-size: 8px;
+line-height: 1.42857;
+}
+
+.hr{
+    background-color: black;
+}
