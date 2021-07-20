@@ -5,8 +5,10 @@ import { Container, } from 'react-bootstrap';
 import Error    from '../Error';
 import Pending  from '../Pending';
 import useFetch from '../useFetch';
+import HeaderButtons   from './HeaderButtons';
 import HeaderEditIntro from './HeaderEditIntro';
 import HeaderJumbotron from './HeaderJumbotron';
+import HeaderIntro     from './HeaderIntro';
 
 /*
     _id       : "5d84937322b7b54d848eb41b", //server generated
@@ -42,6 +44,9 @@ const Header = ({  }) => {
                                         <header key={ user._id }>
                                             <HeaderJumbotron user={ user } />
                                             <HeaderEditIntro />
+                                            <HeaderIntro user={ user } />
+                                            <HeaderButtons />
+                                            
                                         </header>
                                     )
                     }
