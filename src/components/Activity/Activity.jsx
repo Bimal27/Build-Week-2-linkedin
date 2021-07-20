@@ -1,11 +1,11 @@
 import './ActivityStyle.css'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import React from 'react'
 import ActivityList from './ActivityList'
 
 export default function Activity() {
     return (
-        <div id='activity'>
+        <div id='activity' className='mb-3'>
             <Container>
                 <Row>
                     <div><h5>Activity</h5></div>
