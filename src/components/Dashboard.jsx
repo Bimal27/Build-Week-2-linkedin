@@ -1,7 +1,9 @@
 import { Component } from "react";
 import { Container, Col, Row } from "react-bootstrap";
-import '../Assets/Dashboard.css'
-import {GiRadarDish} from 'react-icons/gi';
+import "../Assets/Dashboard.css";
+import { GiRadarDish } from "react-icons/gi";
+import { BsFillPeopleFill, BsBookmarkFill } from "react-icons/bs";
+import { FaRegMoneyBillAlt } from "react-icons/fa";
 
 class Dashboard extends Component {
   render() {
@@ -11,36 +13,60 @@ class Dashboard extends Component {
           <h6>Your Dashboard</h6>
           <small className="text-muted font-italic">Private to you</small>
           <Container>
-              <Row className="mt-2 ">
-            <Col className="  rounded-left bg-success">3<p>who viewed your profile</p></Col>
-            <Col className=" bg-primary">2<p>Post view</p></Col>
-            <Col className=" rounded-right bg-success">17<p>Search appreances</p></Col>
-        
-          </Row>
-          <Row className="mt-2 bg-primary rounded">
-            <div className="mr-2 ml-2">
-            <GiRadarDish />
-            </div>
-            <div>
-              <h5>Creator mode:Off</h5>
-              <p>Grow your audience and</p>
-            </div>
-          {/* <p className="font-weight-bold"><GiRadarDish />Normal weight text.</p> */}
-          </Row>
-          <Row>
-          <p className="font-weight-bold bg-success"><GiRadarDish />Normal weight text.</p>
-          </Row>
-          
-    
+            <Row className="row-1 mt-2 rounded ">
+              <Col className=" border-right rounded-left ">
+                3<p>who viewed your profile</p>
+              </Col>
+              <Col className="border-right">
+                2<p>Post view</p>
+              </Col>
+              <Col className=" rounded-right ">
+                17<p>Search appreances</p>
+              </Col>
+            </Row>
 
-         
-          
-        
-          
-          
-          
+            <div className=" row-1 mt-3 rounded ">
+            <Row>
+              <div className="ml-3 mt-2 ">
+                <h5 className="font-weight-bold">
+                  <GiRadarDish className="icons mr-2" />
+                  Creator mode:Off
+                </h5>
+                <p>Grow your audience and</p>
+              </div>
+            </Row>
+
+            <Row>
+              <div className="ml-3 mt-2 ">
+                <h5 className="font-weight-bold">
+                  <BsFillPeopleFill className="icons mr-2" />
+                  Creator mode:Off
+                </h5>
+                <p>Grow your audience and</p>
+              </div>
+            </Row>
+
+            <Row>
+              <div className="ml-3 mt-2 ">
+                <h5 className="font-weight-bold">
+                  <BsBookmarkFill className="icons mr-2" />
+                  Creator mode:Off
+                </h5>
+                <p>Grow your audience and</p>
+              </div>
+            </Row>
+
+            <Row>
+              <div className="ml-3 mt-2 ">
+                <h5 className="font-weight-bold">
+                  <FaRegMoneyBillAlt className="icons mr-2" />
+                  Creator mode:Off
+                </h5>
+                <p>Grow your audience and</p>
+              </div>
+            </Row>
+            </div>
           </Container>
-          
         </div>
       </Container>
     );

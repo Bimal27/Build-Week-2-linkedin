@@ -4,9 +4,8 @@
     border-radius: 5px;
 }
 
-
-.cells{
-    border-radius: 5px;
+.row-1{
+    background-color:rgb(255, 255, 255);
 }
 
 p{
@@ -14,6 +13,10 @@ p{
 line-height: 1.42857;
 }
 
-.hr{
-    background-color: black;
+h5{
+    font-size: 8px;
+}
+
+.icons{
+    font-size: 10px;
 }
