@@ -5,10 +5,6 @@ import PeopleUMayKnow from "./PeopleUMayKnow";
 import {MdUnfoldLess} from 'react-icons/md'
 
       
-        
-    
-
-
 class fetching extends Component {
         
     state={
@@ -47,16 +43,23 @@ render(){
     return(
     <Container className='mt-5'>
     <Row className='justify-content-end' >
-    <Col style={{border : '1px solid gainsboro',borderRadius:'8px'}} md={4} xl={3} className='shadow px-2 d-none d-md-block'>
-    <h6 className='text-heading-medium mt-2'><strong>People you may know</strong></h6>
-        {this.state.showlessormore ? this.state.data.slice(0,5).map(e => <PeopleUMayKnow dataobj={e}/>)
-            : this.state.data.slice(0,9).map(e => <PeopleUMayKnow dataobj={e}/>)}        
+    <Col style={{border : '1px solid gainsboro',borderRadius:'8px',padding:'5px'}} md={4} xl={3} className='shadow px-2 d-none d-md-block'>
+    <h6 style={{marginBottom:'20px'}} className='text-heading-medium mt-2'><strong>People you may know</strong></h6>
+        {this.state.showlessormore ? this.state.data.slice(0,5).map(e => <PeopleUMayKnow dataobj={e} key={e._id}/>)
+            : this.state.data.slice(0,9).map(e => <PeopleUMayKnow dataobj={e} key={e._id}/>)}        
                <hr style={{border: '1px solid gainsboro',marginBottom:'0'}}/>
 
-             <div className='d-flex justify-content-center'> <Button style={{border:'1px white',fontWeight:'800'}} onClick={() => {this.setState({showlessormore: !this.state.showlessormore})}} variant='outline-secondary'>
-        { this.state.showlessormore ? 'Show more'
-                                    : 'Show less'}
-                             </Button>< MdUnfoldLess /></div>
+               <button 
+                                    onClick={() => this.setState({showlessormore: !this.state.showlessormore})} 
+                                    style={{border: 'none', backgroundColor:'Transparent',textAlign:'center',margin:'auto',display:'flex'}}>
+                                    {
+                                        this.state.showlessormore
+                                            // "Show less"
+                                            ? (<span className="mr-2 my-1 ">Show more<i className="bi bi-chevron-compact-down ml-3 mt-2"></i></span>)
+                                            //: 'Show more'
+                                            :   (<span className="mr-2 my-1 ">Show less<i className="bi bi-chevron-compact-up ml-3 mt-2"></i></span>)
+                                    }
+                                </button>
             </Col>        
             </Row>
             </Container>
