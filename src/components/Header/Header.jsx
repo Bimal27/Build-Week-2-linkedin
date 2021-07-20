@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, ListGroupItem, } from 'react-bootstrap';
-// import { AUTHORIZATION } from '../hidden/credentials'
-import Error from './Error';
-import Pending from './Pending';
-import useFetch from './useFetch';
+import './Header.scss'
+import React from 'react';
+import { AUTHORIZATION } from '../../hidden/credentials'
+import { Container, } from 'react-bootstrap';
+import Error    from '../Error';
+import Pending  from '../Pending';
+import useFetch from '../useFetch';
 
 /*
     _id       : "5d84937322b7b54d848eb41b", //server generated
@@ -20,16 +21,13 @@ import useFetch from './useFetch';
     __v       : 0 //server generated           : "60e588767273090015d5571f"
 */
 
-const Jumbotron = ({ title }) => {
+const Header = ({  }) => {
 
     const URL = 'https://striveschool-api.herokuapp.com/api/profile'
-    const { dataList: userList, isPending, isError } = useFetch( URL, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlM2M4NWNlYWY0ODAwMTVjOTE4NjgiLCJpYXQiOjE2MjY3MDEzNzAsImV4cCI6MTYyNzkxMDk3MH0.IM9cEo_PuSRIB7l1erCyKvf0jtzAUGi2Vr_ARs71CME' )
+    const { dataList: userList, isPending, isError } = useFetch( URL, AUTHORIZATION )
 
     return ( 
         <Container>
-            <Row className="justify-content-center">
-                <Col xs={12} md={6}>
-                    <h2> { title } </h2>
                     {   isError && <Error responseStatus={ isError }/>    }
                     {
                         isPending
@@ -37,16 +35,15 @@ const Jumbotron = ({ title }) => {
                             : userList &&
                                 userList
                                     .filter( user => user.name === 'Attila' )
-                                    .map( ({ _id, name ,surname ,email }) => 
-                                        <ListGroupItem key={ _id }>
-                                            From: { name }
-                                        </ListGroupItem>
+                                    .map( ( user ) => 
+                                        
+                                        <header key={ user._id }>
+                                            {user.name}
+                                        </header>
                                     )
                     }
-                </Col>
-            </Row>
         </Container>
     );
 }
 
-export default Jumbotron;
+export default Header;
