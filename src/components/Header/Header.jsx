@@ -5,6 +5,7 @@ import { Container, } from 'react-bootstrap';
 import Error    from '../Error';
 import Pending  from '../Pending';
 import useFetch from '../useFetch';
+import HeaderEditIntro from './HeaderEditIntro';
 import HeaderJumbotron from './HeaderJumbotron';
 
 /*
@@ -40,6 +41,7 @@ const Header = ({  }) => {
                                         
                                         <header key={ user._id }>
                                             <HeaderJumbotron user={ user } />
+                                            <HeaderEditIntro />
                                         </header>
                                     )
                     }
