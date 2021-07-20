@@ -9,6 +9,7 @@ import HeaderButtons   from './HeaderButtons';
 import HeaderEditIntro from './HeaderEditIntro';
 import HeaderJumbotron from './HeaderJumbotron';
 import HeaderIntro     from './HeaderIntro';
+import HeaderOpenToWork from './HeaderOpenToWork';
 
 /*
     _id       : "5d84937322b7b54d848eb41b", //server generated
@@ -46,7 +47,7 @@ const Header = ({  }) => {
                                             <HeaderEditIntro />
                                             <HeaderIntro user={ user } />
                                             <HeaderButtons />
-                                            
+                                            <HeaderOpenToWork />
                                         </header>
                                     )
                     }
