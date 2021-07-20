@@ -1,7 +1,7 @@
 import './Header.scss'
 import React from 'react';
 import { AUTHORIZATION } from '../../hidden/credentials'
-import { Container, } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import Error    from '../Error';
 import Pending  from '../Pending';
 import useFetch from '../useFetch';
@@ -31,8 +31,10 @@ const Header = ({  }) => {
     const URL = 'https://striveschool-api.herokuapp.com/api/profile'
     const { dataList: userList, isPending, isError } = useFetch( URL, AUTHORIZATION )
 
-    return ( 
+    return (
         <Container>
+                <Row>
+                    <Col>
                     {   isError && <Error responseStatus={ isError }/>    }
                     {
                         isPending
@@ -51,6 +53,8 @@ const Header = ({  }) => {
                                         </header>
                                     )
                     }
+                </Col>
+            </Row>
         </Container>
     );
 }
