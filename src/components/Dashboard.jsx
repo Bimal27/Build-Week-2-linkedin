@@ -18,8 +18,22 @@ class Dashboard extends Component {
         
           </Row>
           <Row className="mt-2 bg-primary rounded">
-          <p className="font-weight-bold"><GiRadarDish />Normal weight text.</p>
+            <div className="mr-2 ml-2">
+            <GiRadarDish />
+            </div>
+            <div>
+              <h5>Creator mode:Off</h5>
+              <p>Grow your audience and</p>
+            </div>
+          {/* <p className="font-weight-bold"><GiRadarDish />Normal weight text.</p> */}
           </Row>
+          <Row>
+          <p className="font-weight-bold bg-success"><GiRadarDish />Normal weight text.</p>
+          </Row>
+          
+    
+
+         
           
         
           
