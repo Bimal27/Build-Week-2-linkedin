@@ -1,1 +1,0 @@
-export const Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWU1M2IzNTgxNzAwMTVjMjI2ZmEiLCJpYXQiOjE2MjY2ODgyODYsImV4cCI6MTYyNzg5Nzg4Nn0.jLBxcWF9mRozIiytcPZgROozVtCo_yFvR70ccS4WpOw' 
