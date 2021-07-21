@@ -1,13 +1,23 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import About from "./components/About";
-import Dashboard from "./components/Dashboard";
+ features/DashboardAndAbout
+===
 
-const App = () => (
-  <div className="App">
-    <Dashboard />
-    <About />
-  </div>
-);
+import './App.css';
+import Footer from './components/Footer';
+import TopNavbar from './components/Navbar/TopNavbar';
+import ProfilePage from './components/ProfilePage';
+
+
+
+function App() {
+    return (
+        <div className="App">
+            <TopNavbar/>
+            <ProfilePage/>
+            <Footer/>
+        </div>
+    );
+
+}
+
 
 export default App;

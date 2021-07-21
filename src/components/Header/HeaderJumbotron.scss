@@ -1,0 +1,32 @@
+.jumbo {
+    background-image : url( "https://images.freeimages.com/images/large-previews/01a/technology-background-1632715.jpg" );
+    position      : relative;
+    border-top-left-radius    : 16px;
+    border-top-right-radius   : 16px;
+    border-bottom-left-radius : 0px!important;
+    border-bottom-right-radius: 0px!important;
+    height        : 120px;
+    > * {
+        border-radius : 50%;
+    }
+    .MdPhotoCamera { 
+        background-color : rgb(255, 255, 255);
+        position : relative;
+        border   : 8px solid white;
+        color    : #0a66c2;
+        width    : 32px;
+        height   : 32px;
+        left     : 90%;
+        top      : -16px;
+    }
+    
+    .image { 
+        position : absolute;
+        overflow : hidden;
+        border   : 5px solid white;
+        width    : 150px;
+        height   : 150px;
+        top      : 20px;
+        left     : 32px;
+    }
+}
