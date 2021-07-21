@@ -5,6 +5,7 @@ import ExperienceListItem from './ExperienceListItem'
 import ModalExperience from './ModalExperience'
 import { CgMathPlus } from "react-icons/cg";
 import { useEffect, useState } from 'react';
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export default function ExperienceList(props) {
 
@@ -12,6 +13,10 @@ export default function ExperienceList(props) {
     const [experience, setExperience] = useState([])
     const [modalShow, setModalShow] = useState(false);
     const [userId, setUserId] = useState('')
+    const [showMore, setShowMore] = useState(false)
+    const sliceValue = !showMore ? experience.slice(0, 5) : experience
+    const experienceValue = showMore ? "Show Less" : `Show ${experience.length - 5} more experiences`
+    const iconValues = !showMore ? <IoIosArrowDown /> : <IoIosArrowUp />
 
     useEffect(() => {
         fetchdata()
@@ -42,16 +47,26 @@ export default function ExperienceList(props) {
                     <div><CgMathPlus onClick={() => setModalShow(true)} /></div>
                 </Row>
                 {
-                    experience.map(exp => {
+
+                    sliceValue.map(exp => {
                         return <ExperienceListItem key={exp._id} expId={exp._id} role={exp.role} company={exp.company} startDate={exp.startDate} description={exp.description} area={exp.area} />
                     })
-                    
+
                 }
+                {
+                    experience.length > 5 && <Row id='showmore'>
+                        <div onClick={() => setShowMore(!showMore)}>
+                            <span>{experienceValue}</span><span>{iconValues}</span>
+                        </div>
+                    </Row>
+                }
+
             </Container>
             <ModalExperience
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 userId={userId}
+                fetchdata={() => fetchdata}
             />
         </div>
     )
