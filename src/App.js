@@ -1,10 +1,7 @@
- features/DashboardAndAbout
-===
-
-import './App.css';
 import Footer from './components/Footer';
 import TopNavbar from './components/Navbar/TopNavbar';
 import ProfilePage from './components/ProfilePage';
+import './App.css'
 
 
 
