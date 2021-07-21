@@ -6,6 +6,10 @@
 
 .row-1{
     background-color:rgb(255, 255, 255);
+    
+}
+.cells{
+    border-bottom: 1px solid rgb(236, 232, 232);
 }
 
 p{

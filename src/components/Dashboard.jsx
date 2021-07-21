@@ -4,6 +4,8 @@ import "../Assets/Dashboard.css";
 import { GiRadarDish } from "react-icons/gi";
 import { BsFillPeopleFill, BsBookmarkFill } from "react-icons/bs";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
+import DashboardBodyItem from "./DashboardBodyItem";
+import DashboardTopItem from "./DashboardTopItem";
 
 class Dashboard extends Component {
   render() {
@@ -13,60 +15,47 @@ class Dashboard extends Component {
           <h6>Your Dashboard</h6>
           <small className="text-muted font-italic">Private to you</small>
           <Container>
-            <Row className="row-1 mt-2 rounded ">
-              <Col className=" border-right rounded-left ">
-                3<p>who viewed your profile</p>
-              </Col>
-              <Col className="border-right">
-                2<p>Post view</p>
-              </Col>
-              <Col className=" rounded-right ">
-                17<p>Search appreances</p>
-              </Col>
-            </Row>
+            <Row className="row-1  rounded ">
+              <DashboardTopItem 
+                num="6"
+                text="Who viewed your profile"
+              />
+              <DashboardTopItem 
+                num="20"
+                text="Post views"
+              />
+              <DashboardTopItem 
+                num="19"
+                text="Search appearances"
+              />
 
-            <div className=" row-1 mt-3 rounded ">
-            <Row>
-              <div className="ml-3 mt-2 ">
-                <h5 className="font-weight-bold">
-                  <GiRadarDish className="icons mr-2" />
-                  Creator mode:Off
-                </h5>
-                <p>Grow your audience and</p>
-              </div>
             </Row>
-
-            <Row>
-              <div className="ml-3 mt-2 ">
-                <h5 className="font-weight-bold">
-                  <BsFillPeopleFill className="icons mr-2" />
-                  Creator mode:Off
-                </h5>
-                <p>Grow your audience and</p>
-              </div>
-            </Row>
-
-            <Row>
-              <div className="ml-3 mt-2 ">
-                <h5 className="font-weight-bold">
-                  <BsBookmarkFill className="icons mr-2" />
-                  Creator mode:Off
-                </h5>
-                <p>Grow your audience and</p>
-              </div>
-            </Row>
-
-            <Row>
-              <div className="ml-3 mt-2 ">
-                <h5 className="font-weight-bold">
-                  <FaRegMoneyBillAlt className="icons mr-2" />
-                  Creator mode:Off
-                </h5>
-                <p>Grow your audience and</p>
-              </div>
-            </Row>
-            </div>
           </Container>
+
+          <div className=" row-1 mt-3 px-3 rounded ">
+
+            <DashboardBodyItem
+              icon={ <GiRadarDish  /> }
+              title="Creator mode:Off"
+              description="Grow your audience with creator mode"
+              />
+            <DashboardBodyItem
+              icon={ <BsFillPeopleFill /> }
+              title="My Network"
+              description="Manage your connections, events, and interests."
+              />
+            <DashboardBodyItem
+              icon={ <FaRegMoneyBillAlt /> }
+              title="Salary Insights"
+              description="See how your salary compares to others in the community."
+              />
+            <DashboardBodyItem
+              icon={ <BsBookmarkFill /> }
+              title="My items"
+              description="Keep track of your jobs, courses and articles."
+              />
+           
+          </div>
         </div>
       </Container>
     );
