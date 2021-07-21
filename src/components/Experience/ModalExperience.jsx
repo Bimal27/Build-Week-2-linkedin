@@ -56,6 +56,7 @@ export default function ModalExperience(props) {
       })
       if (response.ok) {
         alert('The Event is Deleted Successfully')
+        props.fetchdata()
         props.onHide()
       } else {
         alert('there was an issue with the deletion')
@@ -91,6 +92,7 @@ export default function ModalExperience(props) {
           endDate: '',
           description: '',
         })
+        props.fetchdata()
         props.onHide()
 
       }
@@ -204,12 +206,12 @@ export default function ModalExperience(props) {
       {
         props.expId ?
           <Modal.Footer className='d-flex justify-content-between'>
-            <Button onClick={deleteExperience}>Delete</Button>
-            <Button onClick={fetchPostAndPutData}>Edit</Button>
+            <Button  className='modalbuttons' onClick={deleteExperience}>Delete</Button>
+            <Button className='modalbuttons' onClick={fetchPostAndPutData}>Edit</Button>
           </Modal.Footer>
           :
           <Modal.Footer>
-            <Button onClick={fetchPostAndPutData}>Save</Button>
+            <Button className='modalbuttons' onClick={fetchPostAndPutData}>Save</Button>
           </Modal.Footer>
       }
     </Modal>
