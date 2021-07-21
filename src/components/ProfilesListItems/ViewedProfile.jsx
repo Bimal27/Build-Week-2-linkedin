@@ -21,10 +21,10 @@ class ViewedProfile extends Component {
             })
             if (response.ok) {
                 const data = await response.json()
-                console.log(data)
                 this.setState({
                     profiles: data
                 })
+                console.log(data);
             }
 
         } catch (error) {
@@ -44,9 +44,9 @@ class ViewedProfile extends Component {
 
                         <div>
                             {this.state.showValue ? this.state.profiles.slice(0, 8).map(profile =>
-                                <SingleProfileListItem name={profile.name} surname={profile.surname} image={profile.image} title={profile.title} />)
+                                <SingleProfileListItem  key={profile._id} name={profile.name} surname={profile.surname} image={profile.image} title={profile.title} />)
                                 : this.state.profiles.slice(0, 4).map(profile =>
-                                    <SingleProfileListItem name={profile.name} surname={profile.surname} image={profile.image} title={profile.title} />)
+                                <SingleProfileListItem key={profile._id} name={profile.name} surname={profile.surname} image={profile.image} title={profile.title} />)
                             }
                         </div>
                         <div><hr></hr></div>
