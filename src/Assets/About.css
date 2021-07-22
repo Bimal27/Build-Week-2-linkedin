@@ -1,0 +1,33 @@
+.form {
+  position: relative;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn-pencil {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 5px 2px 5px;
+  color: rgb(32, 32, 32);
+  font-size: 1.6em;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+.btn-pencil:hover {
+  background-color: rgb(229, 229, 233);
+  color: rgb(32, 32, 32);
+}
+.btn-pencil:focus {
+  box-shadow: none;
+
+  color: none;
+  background-color: none;
+  border-color: none;
+}
+.btn-save {
+  border-radius: 20px;
+  padding: 0px 10px;
+}

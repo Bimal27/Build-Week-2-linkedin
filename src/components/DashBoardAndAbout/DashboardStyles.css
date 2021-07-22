@@ -1,0 +1,115 @@
+
+#Dashboard{
+    background-color: #DCE6F1;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#Dashboard>.container>.row{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius:10px !important;
+
+}
+
+#Dashboard>.container>.row:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    padding: 0px 15px 0px 15px;
+    margin: 0px 0px 20px 0px;
+    background-color:rgb(255, 255, 255);
+    
+}
+#Dashboard>.container>.row:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px 15px;
+    margin: 0px;
+    background-color:rgb(255, 255, 255);
+}
+
+#Dashboard>.container>.row:nth-child(2) .columns{
+    margin: 0px;
+    border-right: rgba(165, 161, 161, 0.157) 1px solid;
+}
+
+#Dashboard>.container>.row:nth-child(2) .columns:nth-child(2){
+    margin-left: 10px;
+    border-right: rgba(165, 161, 161, 0.157) 1px solid;
+}
+
+#Dashboard>.container>.row:nth-child(2) .columns:nth-child(3){
+    margin-left: 10px;
+    border-right: none
+}
+
+#Dashboard>.container>.row:nth-child(2) .columns h3{
+   font-size: 38px;
+   font-weight: 200;
+   color: #0a66c2;
+   margin-bottom: 2px;
+   margin-top: 5px;
+}
+
+#Dashboard>.container>.row:nth-child(2) .columns p{
+   font-size: 15px;
+
+}
+
+#Dashboard h6{
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    margin-bottom: 3px;
+}
+#Dashboard small{
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    margin-bottom: 3px;
+}
+
+#Dashboard .bodyrows {
+    padding: 10px 0px 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+#Dashboard .bodyrows .icons {
+    width: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+#Dashboard .bodyrows .icons svg {
+    width: 23px;
+    height: 23px;
+    color: grey;
+}
+
+#Dashboard .bodyrows .cells{
+    border-bottom: 1px solid rgb(236, 232, 232);
+    width: 93%;
+}
+
+#Dashboard .bodyrows:last-child>.cells {
+    border-bottom: none
+}
+
+#Dashboard .cells h5{
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+#Dashboard .cells p{
+    font-size: 14px;
+    color: grey;
+
+}
+
+
+
