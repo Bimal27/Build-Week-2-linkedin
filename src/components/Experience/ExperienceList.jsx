@@ -10,13 +10,14 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 export default function ExperienceList(props) {
 
 
-    const [experience, setExperience] = useState([])
-    const [modalShow, setModalShow] = useState(false);
-    const [userId, setUserId] = useState('')
-    const [showMore, setShowMore] = useState(false)
-    const sliceValue = !showMore ? experience.slice(0, 5) : experience
-    const experienceValue = showMore ? "Show Less" : `Show ${experience.length - 5} more experiences`
-    const iconValues = !showMore ? <IoIosArrowDown /> : <IoIosArrowUp />
+    const [experience, setExperience]   = useState([])
+    const [modalShow , setModalShow]    = useState(false);
+    const [userId    , setUserId]       = useState('')
+    const [showMore  , setShowMore]     = useState(false)
+
+    const sliceValue        = !showMore ? experience.slice(0, 5)    : experience
+    const experienceValue   = showMore  ? "Show Less"               : `Show ${experience.length - 5} more experiences`
+    const iconValues        = !showMore ? <IoIosArrowDown />        : <IoIosArrowUp />
 
     useEffect(() => {
         fetchdata()
