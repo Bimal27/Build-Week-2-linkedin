@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+#root {
+    background-color: #F3F2EF;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#profilepage {
+    max-width: 1180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#profilepage .col {
+    max-width: 1200px;
+    padding: 0px;
+    margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#sidebaroptionalmenu {
+    padding: 5px 15px 5px 15px;
+    margin: 0%;
+    background-color: white;
+    width: 100%;
+    border-radius: 8px;
+    border: solid 1px rgba(133, 131, 131, 0.287);
+
+}
+#sidebaroptionalmenu .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+#sidebaroptionalmenu .row:first-child{
+    border-bottom: solid 1px rgba(133, 131, 131, 0.287);
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#sidebaroptionalmenu h2{
+    font-size: 16px ;
+    margin: 0px;
+    
+}
+#sidebaroptionalmenu svg{
+    color: #292828bb;
+    width: 20px;
+    height: 20px;
+    
+}
+
+
+/* START OF THE FOOTER */
+
+#footer {
+    margin: 0px;
+    padding: 0px;
+}
+
+#footer .row:first-child img {
+    width: 84px;
+}
+#footer .listgroup {
+    display: flex;
+}
+#footer .listgroup ul {
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #292828bb;
+}
+
+
+#footer li {
+    list-style-type: none;
+    width: 200px;
+    height: 30px;
+}
+
+#footer .settings {
+    width: 290px;
+}
+#footer .settings svg {
+    width: 20px;
+    height: 20px;
+    color: #292828bb;
+}
+#footer .settings>div>div:first-child {
+    width: 30px;
+    
+}
+
+#footer .settings h5 {
+    font-size: 15px;
+    color: #292828bb;
+    font-weight: 600;
+    margin-bottom: 3px;
+  
+}
+#footer .settings p {
+    font-size: 13px;
+    color: #292828bb;
+  
+}
+
+#footer .form-group  {
+    width: 300px;
+    background-color: #F3F2EF ;
+
+  
+}
+#footer .form-group .form-label  {
+    font-size: 12px;
+    margin-bottom: 2px;
+  
+}
+
+#footer .form-group .form-control {
+    background-color: #F3F2EE ; 
+    border: solid 1px grey;
+}
+
+#footer .copyright {
+    font-size: 13px;
 }
