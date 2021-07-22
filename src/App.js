@@ -1,20 +1,27 @@
+import Footer from './components/Footer';
+import TopNavbar from './components/Navbar/TopNavbar';
+import ProfilePage from './components/ProfilePage';
+import HomePage from './components/NewsFeed/HomePage';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './App.css'
 
-import './App.css';
-//import PeopleUMayKnow from './components/PeopleUMayKnow';
-//import FetchProfiles from './components/FetchProfiles'
-//import EditandDelete from './components/Education_Edit';
-import HomeTop from './components/Home-Top';
-import HomeTopModel from './components/Home-Top-Model';
+
 
 function App() {
-  return (
-   <>
-   {/*<FetchProfiles/>
-    <EditandDelete/>*/}
-    <HomeTop/>
+
     
-    </>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <TopNavbar />
+                <Route  path='/' exact component={ProfilePage} />
+                <Route  path='/home' exact component={HomePage} />
+                <Footer />
+            </Router>
+        </div>
+    );
+
 }
+
 
 export default App;

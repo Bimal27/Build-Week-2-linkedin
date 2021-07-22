@@ -1,0 +1,51 @@
+
+#singleprofileitem>div  {
+    display: flex;
+}
+#singleprofileitem img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+#singleprofileitem h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+#singleprofileitem p {
+    font-size: 14px;
+}
+
+#singleprofileitem button {
+    border-radius: 20px;
+    border: 1px solid rgb(102, 100, 100);
+    font-size: 18px;
+    font-weight: 700;
+    width: 110px;
+    height: 35px;
+    margin-left: 55px;
+    color: grey;
+    background-color: white;
+}
+
+
+#viewedprofile footer button {
+    background:  white;
+    border: none;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(78, 76, 76);
+}
+
+#viewedprofile .row>h2 {
+    color: black;
+    height: 35px;
+
+}
+
+#viewedprofile footer>div {
+    text-align: center;
+}

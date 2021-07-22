@@ -1,0 +1,76 @@
+  #aboutcomponent {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  #aboutcomponent .row:first-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 5px 15px;
+  position: relative;
+  }
+  #aboutcomponent .row:last-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px 15px 15px;
+  }
+
+  #aboutcomponent .row:last-child form {
+  position: relative;
+  line-height: 1.9rem;
+  max-height: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+
+
+  #aboutcomponent .row h6 {
+  font-size: 23px;
+  font-weight: 300;
+  }
+
+  #aboutcomponent .row svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  #aboutcomponent .row:last-child p {
+    margin: 0px 5px 2px 0px;
+    font-size: 14px;
+  }
+  #aboutcomponent .row:last-child small {
+    color: grey;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .btn-pencil {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 3px 5px 2px 5px;
+    color: rgb(32, 32, 32);
+    font-size: 1.6em;
+    border-radius: 50%;
+    transition: all .3s ease;
+  }
+  
+  .btn-pencil:hover {
+    background-color: rgb(229, 229, 233);
+    color: rgb(32, 32, 32);
+  }
+  .btn-pencil:focus {
+    box-shadow: none;
+      color: none;
+    background-color: none;
+    border-color: none;
+  }
+
+  .btn-save {
+    border-radius: 20px;
+    padding: 0px 10px;
+  }
+  
