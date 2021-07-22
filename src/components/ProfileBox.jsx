@@ -58,7 +58,10 @@ const ProfileBox = () => {
 
               <ListGroup className="list-group-flush">
                 <ListGroupItem className="hover">
-                  Connections <span className="four">4</span>
+                  <div>
+                    <span>Connections</span>
+                    <span className="four">4</span>
+                  </div>
                   <p className="font-weight-bold">Grow your network</p>
                 </ListGroupItem>
 
