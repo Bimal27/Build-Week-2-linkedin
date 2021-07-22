@@ -14,7 +14,7 @@ function App() {
         <div className="App">
             <Router>
                 <TopNavbar />
-                <Route  path='/' exact component={ProfilePage} />
+                <Route  path='/' exact render={() => <ProfilePage/>} />
                 <Route  path='/home' exact component={HomePage} />
                 <Footer />
             </Router>

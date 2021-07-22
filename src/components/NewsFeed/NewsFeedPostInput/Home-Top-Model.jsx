@@ -12,19 +12,7 @@ function HomeTopModel() {
 
     return (
         <>
-            <Button onClick={handleShow}
-                style={{
-                    padding: '0 11rem',
-                    borderColor: 'black',
-                    borderRadius: '50px',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-
-                }}
-                variant='transparent'
-            >
-                <span className='pl-0'>post</span> </Button>
-
+            <Button id='modalbutton' onClick={handleShow}> Start a post </Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Create a Post</Modal.Title>

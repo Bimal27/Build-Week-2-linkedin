@@ -39,41 +39,43 @@ const ProfileBox = () => {
   }, []);
 
   return (
-    <Container>
-      {profile && (
-        <Row>
-          <Card className="mt-4 ml-2 rounded-top">
-            <div className="wrapper rounded-top">
-              <Image
-                src={profile.image}
-                roundedCircle
-                className="profile-img"
-              />
-            </div>
-            <Card.Body className="mt-5 text-center">
-              <Card.Title>{profile.name} {profile.surname}</Card.Title>
-              <Card.Text>{profile.title}</Card.Text>
-            </Card.Body>
+    <div id='profilebox'>
+      <Container>
+        {profile && (
+          <Row>
+            <Card>
+              <div className="wrapper rounded-top">
+                <Image
+                  src={profile.image}
+                  roundedCircle
+                  className="profile-img"
+                />
+              </div>
+              <Card.Body className="mt-5 text-center">
+                <Card.Title>{profile.name} {profile.surname}</Card.Title>
+                <Card.Text>{profile.title}</Card.Text>
+              </Card.Body>
 
-            <ListGroup className="list-group-flush">
-              <ListGroupItem className="hover">
-                Connections <span className="four">4</span>
-                <p className="font-weight-bold">Grow your network</p>
-              </ListGroupItem>
+              <ListGroup className="list-group-flush">
+                <ListGroupItem className="hover">
+                  Connections <span className="four">4</span>
+                  <p className="font-weight-bold">Grow your network</p>
+                </ListGroupItem>
 
-              <ListGroupItem className="hover">
-                <RiCheckboxBlankFill className="mr-1" />
-                show all Premium features
-              </ListGroupItem>
-              <ListGroupItem className="hover">
-                <BsFillBookmarkFill className="mr-1" />
-                My items
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-        </Row>
-      )}
-    </Container>
+                <ListGroupItem className="hover">
+                  <RiCheckboxBlankFill className="mr-1" />
+                  show all Premium features
+                </ListGroupItem>
+                <ListGroupItem className="hover">
+                  <BsFillBookmarkFill className="mr-1" />
+                  My items
+                </ListGroupItem>
+              </ListGroup>
+            </Card>
+          </Row>
+        )}
+      </Container>
+    </div>
   );
 };
 

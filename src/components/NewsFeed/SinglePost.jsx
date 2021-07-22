@@ -24,25 +24,25 @@ export default function SinglePost(props) {
                 <Row>
                     <div>
                         <div>
-                            <span><BiLike/></span>
+                            <span><BiLike /></span>
                             <span><h6>Like</h6></span>
                         </div>
                     </div>
                     <div className='mr-3'>
                         <div>
-                            <span className='mr-1'><BiCommentMinus/></span>
+                            <span className='mr-1'><BiCommentMinus /></span>
                             <span><h6>Comment</h6></span>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <span><RiShareForwardLine/></span>
+                            <span><RiShareForwardLine /></span>
                             <span><h6>Share</h6></span>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <span><RiSendPlaneFill/></span>
+                            <span><RiSendPlaneFill /></span>
                             <span><h6>Send</h6></span>
                         </div>
                     </div>
