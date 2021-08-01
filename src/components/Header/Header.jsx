@@ -42,7 +42,7 @@ const Header = ({  }) => {
                             ? <Pending />
                             : userList &&
                                 userList
-                                    .filter( user => user.name === 'Attila' )
+                                    .filter( user => user.name === 'Bimal Kumar' )
                                     .map( ( user ) => 
                                         
                                         <header key={ user._id }>
